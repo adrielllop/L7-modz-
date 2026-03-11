@@ -1,120 +1,99 @@
-local r = gg.alert(
-"╔══════════════════════════════════╗\n" ..
-"║     🇧🇷 𝐒𝐂𝐑𝐈𝐏𝐓 𝐋𝐈𝐕𝐄 𝐑𝐔𝐒𝐒𝐈𝐀 🇧🇷     ║\n" ..
-"╠══════════════════════════════════╣\n" ..
-"║                                  ║\n" ..
-"║      🗡️ 𝐂𝐑𝐈𝐀𝐃𝐎 𝐏𝐎𝐑: 🗡️        ║\n" ..
-"║     Ódio modz 😈 🍷 ║\n" ..
-"║                                  ║\n" ..
-"╚══════════════════════════════════╝",
-"𝐈𝐍𝐈𝐂𝐈𝐀𝐑 ➢",
-"𝐒𝐀𝐈𝐑 ⭕"
+-- ╔══════════════════════════════════╗
+-- ║        vip        ║
+-- ║      vip    ║
+-- ╚══════════════════════════════════╝
+
+-- =========================
+-- 🔐 LOGIN
+-- =========================
+local usuario = "3dias"
+local senha   = "3dias"
+
+-- ⏰ DATA DE EXPIRAÇÃO😶‍🌫️
+local expira = os.time{
+    year = 2026,
+    month = 4,
+    day = 13,
+    hour = 23,
+    min = 59,
+    sec = 59,
+}
+
+if os.time() > expira then
+    gg.alert("🔐𝐋𝐎𝐆𝐈𝐍 𝐈𝐍𝐒𝐏𝐈𝐑𝐀𝐃𝐎🔐\n📱𝐐𝐔𝐄𝐑 𝐀𝐓𝐔𝐀𝐋𝐈𝐙𝐀𝐑 𝐎 𝐋𝐎𝐆𝐈𝐍?📱\n📞 𝐄𝐍𝐓𝐑𝐄 𝐄𝐌 𝐂𝐎𝐍𝐓𝐀𝐓𝐎📞\n👑𝐀𝐋𝐀𝐍𝐙𝐈𝐍𝐇𝐎/𝐒𝐑 𝐃𝐀𝐑𝐂𝐊👑\n📲 (18) 991266637 📲")
+    os.exit()
+end
+
+local input = gg.prompt(
+{"👤𝐒𝐄𝐔 𝐋𝐎𝐆𝐈𝐍👤", "🔒𝐒𝐔𝐀 𝐒𝐄𝐍𝐇𝐀🔒"},
+    nil,
+    {"text", "text"}
 )
 
+if not input then os.exit() end
+
+if input[1] ~= usuario or input[2] ~= senha then
+    gg.alert("❌𝐋𝐎𝐆𝐈𝐍 𝐎𝐔 𝐒𝐄𝐍𝐇𝐀 𝐈𝐍𝐂𝐎𝐑𝐑𝐄𝐓𝐎𝐒!❌")
+    os.exit()
+end
+
+gg.toast("✅ 𝑳𝑶𝑮𝑰𝑵 𝐂𝐎𝐑𝐑𝐄𝐓𝐎! ✅")
+
+local r = gg.alert(
+"⬛⬜⬛⬜⬛⬜⬛⬜⬛⬜⬛⬜⬛⬜\n" ..
+"⬜   🔥𝐒𝐂𝐑𝐈𝐏𝐓 𝐋𝐈𝐕𝐄 𝐑𝐔𝐒𝐒𝐈𝐀🔥   ⬛\n" ..
+"⬛       ⚠️🔥VERSÃO 𝐕𝐈𝐏🔥⚠️       ⬜\n" ..
+"⬜⬛⬜⬛⬜⬛⬜⬛⬜⬛⬜⬛⬜⬛\n" ..
+"⬛ 👨‍💻𝐂𝐑𝐈𝐀𝐃𝐎 𝐃𝐀 𝐒𝐂𝐑𝐈𝐏𝐓👨‍💻⬜\n" ..
+"⬜⬛⬜⬛⬜⬇️⬇️⬇️⬜⬛⬜⬛⬜⬛\n" ..
+"⬛        ódio Modz 🇧🇷                          ⬜\n" ..
+"⬜                                                        ⬛\n" ..
+"⬛.                                                       ⬜\n" ..
+"⬜⬛⬜⬛⬜⬛⬜⬛⬜⬛⬜⬛⬜⬛",
+"🔥𝐈𝐍𝐈𝐂𝐈𝐀𝐑 𝐒𝐂𝐑𝐈𝐏𝐓🔥"
+)
 function mainMenu()
 gg.setVisible(false)
   local choice = gg.choice({
-    " ➢ MENU TELEPORTE🗺",
-    " ➢ MENU CARRO🚅 ",
-    " ➢ MENU PLAYER👤",
-    " ➢ MENU ARMAS🎯 ",
-    " ➢ MENU FARM🚜",
-    "⭕ SAIR"
-  }, nil, "SCRIPT LIVE RUSSIA🇧🇷 ")
+  	
+"👤𝐌𝐄𝐍𝐔 𝐏𝐋𝐀𝐘𝐄𝐑👤",
+" 🔫𝐌𝐄𝐍𝐔 𝐀𝐑𝐌𝐀𝐒🔫 ",
+"💵𝐌𝐄𝐍𝐔 𝐅𝐀𝐑𝐌💵 ",
+"❌𝐒𝐀𝐈𝐑❌",
+  }, nil, "🔥𝐒𝐂𝐑𝐈𝐏𝐓 𝐋𝐈𝐕𝐄 𝐑𝐔𝐒𝐒𝐈𝐀 𝐕𝐈𝐏 𝐯¹🔥\n💎𝐕𝐄𝐑𝐒Ã𝐎 𝐕𝐈𝐏💎\n👨‍💻𝐂𝐑𝐈𝐀𝐃𝐎𝐑𝐄𝐒 𝐃𝐀 𝐒𝐂𝐑𝐈𝐏𝐓👨‍💻\n⚡𝐏𝐄𝐃𝐑𝐎 𝐌𝐎𝐃𝐙⚡\n👾𝐃𝐀𝐍𝐈𝐄𝐋 𝐃𝐄𝐍𝐄𝐑👾\n🔰💎𝐃𝐀𝐑𝐂𝐊 𝐇𝐆 𝐒𝐂𝐑𝐈𝐏𝐓💎🔰")
+
 
   if choice == 1 then
-    teleport()
-  elseif choice == 2 then
-    transportMenu()
-  elseif choice == 3 then
     PersMenu()
-  elseif choice == 4 then
+  elseif choice == 2 then
     Gun()
-  elseif choice == 5 then
+  elseif choice == 3 then
     Bots()
-  elseif choice == 6 then
+  elseif choice == 4 then
     os.exit()
   end
 end
 
-function teleport()
-    gg.setVisible(false)
-    local choice = gg.choice({
-        "🚀 Teletransporte por coordenadas",
-        "📍 teleporte qualquer lugar do mapa",
-        "💾 Pontos Salvos",
-        "🗺 TP MAP",
-        "🧾 SALVAR COORDENADAS ANTES DE USAR O TP MAP",
-        "🔙 Voltar"
-    }, nil, "Escolha uma ação")
-
-    
-    if choice == 1 then
-        teleportManual()
-    elseif choice == 2 then
-        selectTeleportCategory()
-    elseif choice == 3 then
-        userSavedPointsMenu()
-    elseif choice == 4 then
-        searchAndReplaceCoords()
-    elseif choice == 5 then
-        TeleportPoMet()
-    elseif choice == 6 then
-        mainMenu()
-    else
-        gg.toast("Nada selecionado")
-        mainMenu()
-    end
-end
-
-function transportMenu()
-    local choice = gg.choice({
-        "🚀 Teletransporte com Transporte",
-        "🚗 Gamemode cara",
-        "💥 Explodir o transporte",
-        "🚀 Teletransporte com Transporte",
-        "🤸 Golpe de transporte", 
-        "🏎️ Aumento de velocidade",
-        "🛵 Patinete rápida",
-        "🔙 Voltar"
-    }, nil, "Transporte")
-
-    if choice == 1 then
-        teleportCar()
-    elseif choice == 2 then
-        toggleFreezeCarHP()
-    elseif choice == 3 then
-        toggleBax()
-    elseif choice == 4 then
-        flip()
-    elseif choice == 5 then
-        speedcars()
-    elseif choice == 6 then
-        FastScooterToggle()
-    elseif choice == 7 or choice == nil then
-        mainMenu()
-    end
-end
 
 function PersMenu()
     gg.setVisible(false)
     local choice = gg.choice({
-        "🔬Hitboxes aumentados",
-        "🏃 Corrida rápida",
-        "👟 Corrida Infinita",
-        "📷 koi Fov",
-        "👁️‍🗨️ Etiquetas de nome",
-        "🌧️ Chuva",
-        "〽️ Mudar apelido",
-        "♥️ vida infinita",
-        "🪖 colete infinito",
-        "🚄 SpeedHack",
-        "🌳 Vegetação",
-        "👁️ melhora gráfico",
-        "🐢 Speed Agachado",
-        "📱 Tela Esticada",
-        "🦘 Super Pulo",
-        "🔙 Voltar"
+"🔬 𝐇𝐈𝐓𝐁𝐎𝐗𝐄𝐒 𝐀𝐔𝐌𝐄𝐍𝐓𝐀𝐃𝐎𝐒 🔬",
+"🏃 𝐂𝐎𝐑𝐑𝐈𝐃𝐀 𝐑Á𝐏𝐈𝐃𝐀 🏃",
+"👟 𝐂𝐎𝐑𝐑𝐈𝐃𝐀 𝐈𝐍𝐅𝐈𝐍𝐈𝐓𝐀 👟",
+"📷 𝐊𝐎𝐈 𝐅𝐎𝐕 📷",
+"👁️‍🗨️ 𝐄𝐓𝐈𝐐𝐔𝐄𝐓𝐀𝐒 𝐃𝐄 𝐍𝐎𝐌𝐄 👁️‍🗨️",
+"🌧️ 𝐂𝐇𝐔𝐕𝐀 🌧️",
+"〽️ 𝐌𝐔𝐃𝐀𝐑 𝐀𝐏𝐄𝐋𝐈𝐃𝐎 〽️",
+"♥️ 𝐕𝐈𝐃𝐀 𝐈𝐍𝐅𝐈𝐍𝐈𝐓𝐀 ♥️",
+"🪖 𝐂𝐎𝐋𝐄𝐓𝐄 𝐈𝐍𝐅𝐈𝐍𝐈𝐓𝐎 🪖",
+"🚄 𝐒𝐏𝐄𝐄𝐃𝐇𝐀𝐂𝐊 🚄",
+"🌳 𝐕𝐄𝐆𝐄𝐓𝐀ÇÃ𝐎 🌳",
+"👁️ 𝐌𝐄𝐋𝐇𝐎𝐑𝐀 𝐆𝐑Á𝐅𝐈𝐂𝐎 👁️",
+"🐢 𝐒𝐏𝐄𝐄𝐃 𝐀𝐆𝐀𝐂𝐇𝐀𝐃𝐎 🐢",
+"📱 𝐓𝐄𝐋𝐀 𝐄𝐒𝐓𝐈𝐂𝐀𝐃𝐀 📱",
+"🦘 𝐒𝐔𝐏𝐄𝐑 𝐏𝐔𝐋𝐎 🦘",
+"🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙"
     }, nil, "Personagem")
 
     if choice == 1 then
@@ -154,15 +133,15 @@ end
 
 function Bots()
         local subMenu = gg.choice({
-            "🚖 FARME TAXI",
-            "🏎️ FARME CORRIDA", 
-            "✈️ FARME AVIÃO",
-            "🛢️ FARME DE SERRARIA",
-            "⚒️ MENU FARME",
-            "🪵 FARME LENHADOR",
-            "🏭 FARME FÁBRICA DE MÓVEIS",
-            "⬅ Voltar"
-        }, nil, "Menu: Farme")
+"🚕𝐅𝐀𝐑𝐌 𝐓𝐀𝐗𝐈🚕",
+"🏎️𝐅𝐀𝐑𝐌 𝐂𝐎𝐑𝐑𝐈𝐃𝐀🏎️",
+"🛩𝐅𝐀𝐑𝐌 𝐀𝐕𝐈Ã𝐎🛩",
+"🛢️𝐅𝐀𝐑𝐌𝐄 𝐃𝐄 𝐒𝐄𝐑𝐑𝐀𝐑𝐈𝐀🛢️",
+"⚒️𝐌𝐄𝐍𝐔 𝐅𝐀𝐑𝐌𝐄⚒️",
+"🪵𝐅𝐀𝐑𝐌𝐄 𝐋𝐄𝐍𝐇𝐀𝐃𝐎𝐑🪵",
+"🏭𝐅𝐀𝐑𝐌𝐄 𝐅Á𝐁𝐑𝐈𝐂𝐀 𝐃𝐄 𝐌Ó𝐕𝐄𝐈𝐒🏭",
+"↩𝐕𝐎𝐋𝐓𝐀𝐑↩"
+        }, nil, "🤑MENU FARM🤑")
 
         if subMenu == 1 then
             botTaxi()
@@ -188,12 +167,12 @@ local recoilActive = false
 function Gun()
     gg.setVisible(false)
     local choice = gg.choice({
-        "🔫 PUXAR ARMA",
-        "🎯 Anti-dispersão",
-        "💥 Deslocamento de visão",
-        "☄️ Anti sobrecarga",
-        "🔙 Voltar"
-    }, nil, "Escolha uma ação")
+   "🔫𝐏𝐔𝐗𝐀𝐑 𝐀𝐑𝐌𝐀🔫",
+"🎯𝐀𝐍𝐓𝐈-𝐃𝐈𝐒𝐏𝐄𝐑𝐒Ã𝐎🎯",
+"💥𝐃𝐄𝐒𝐋𝐎𝐂𝐀𝐌𝐄𝐍𝐓𝐎 𝐃𝐄 𝐕𝐈𝐒Ã𝐎💥",
+"☄️𝐀𝐍𝐓𝐈 𝐒𝐎𝐁𝐑𝐄𝐂𝐀𝐑𝐆𝐀☄️",
+"↩𝐕𝐎𝐋𝐓𝐀𝐑↩"
+    }, nil, "🔫MENU ARMAS🔫")
 
     if choice == 1 then
         Gun1()
@@ -251,9 +230,9 @@ end
 function menuVegetacao()
     while true do
         local opcao = gg.choice({
-            '❌ Desativar (remover plantas)',
-            '✅ Ativar (padrão)',
-            '🔙 Voltar'
+'❌ 𝐃𝐄𝐒𝐀𝐓𝐈𝐕𝐀𝐑 (𝐑𝐄𝐌𝐎𝐕𝐄𝐑 𝐏𝐋𝐀𝐍𝐓𝐀𝐒) ❌',
+'✅ 𝐀𝐓𝐈𝐕𝐀𝐑 (𝐏𝐀𝐃𝐑Ã𝐎) ✅',
+'🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙'
         }, nil, '🌳 VEGETAÇÃO')
         if not opcao or opcao == 3 then break end
         executarComProtecao(function()
@@ -285,9 +264,9 @@ end
 function menuLightMap()
     while true do
         local opcao = gg.choice({
-            '✅ Ativar (claro)',
-            '❌ Desativar (escuro)',
-            '🔙 Voltar'
+'✅ 𝐀𝐓𝐈𝐕𝐀𝐑 (𝐂𝐋𝐀𝐑𝐎) ✅',
+'❌ 𝐃𝐄𝐒𝐀𝐓𝐈𝐕𝐀𝐑 (𝐄𝐒𝐂𝐔𝐑𝐎) ❌',
+'🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙'
         }, nil, '👁️ LIGHT MAP')
         if not opcao or opcao == 3 then break end
         executarComProtecao(function()
@@ -319,12 +298,12 @@ end
 function menuSpeedAgachado()
     while true do
         local opcao = gg.choice({
-            '🧎 2x',
-            '🧎 4x',
-            '🧎 6x',
-            '🧎 8x',
-            '🚶 Normal (1x)',
-            '🔙 Voltar'
+'🧎 𝟐𝐗 𝐒𝐏𝐄𝐄𝐃 𝐀𝐆𝐀𝐂𝐇𝐀𝐃𝐎 🧎',
+'🧎 𝟒𝐗 𝐒𝐏𝐄𝐄𝐃 𝐀𝐆𝐀𝐂𝐇𝐀𝐃𝐎 🧎',
+'🧎 𝟔𝐗 𝐒𝐏𝐄𝐄𝐃 𝐀𝐆𝐀𝐂𝐇𝐀𝐃𝐎 🧎',
+'🧎 𝟖𝐗 𝐒𝐏𝐄𝐄𝐃 𝐀𝐆𝐀𝐂𝐇𝐀𝐃𝐎 🧎',
+'🚶 𝐍𝐎𝐑𝐌𝐀𝐋 (𝟏𝐗) 🚶',
+'🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙'
         }, nil, '🐢 SPEED AGACHADO')
         if not opcao or opcao == 6 then break end
         executarComProtecao(function()
@@ -357,9 +336,9 @@ end
 function menuTelaEsticada()
     while true do
         local opcao = gg.choice({
-            '✅ Ativar',
-            '❌ Desativar',
-            '🔙 Voltar'
+'✅ 𝐀𝐓𝐈𝐕𝐀𝐑 ✅',
+'❌ 𝐃𝐄𝐒𝐀𝐓𝐈𝐕𝐀𝐑 ❌',
+'🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙'
         }, nil, '📱 TELA ESTICADA')
         if not opcao or opcao == 3 then break end
         executarComProtecao(function()
@@ -468,12 +447,12 @@ end
 function menuSuperPulo()
     while true do
         local escolha = gg.choice({
-            "🦘 SUPER PULO 2X",
-            "🦘 SUPER PULO 4X",
-            "🦘 SUPER PULO 6X",
-            "🦘 SUPER PULO 8X",
-            "❌ Desativar Super Pulo",
-            "🔙 Voltar"
+"🦘 𝐒𝐔𝐏𝐄𝐑 𝐏𝐔𝐋𝐎 𝟐𝐗 🦘",
+"🦘 𝐒𝐔𝐏𝐄𝐑 𝐏𝐔𝐋𝐎 𝟒𝐗 🦘",
+"🦘 𝐒𝐔𝐏𝐄𝐑 𝐏𝐔𝐋𝐎 𝟔𝐗 🦘",
+"🦘 𝐒𝐔𝐏𝐄𝐑 𝐏𝐔𝐋𝐎 𝟖𝐗 🦘",
+"❌ 𝐃𝐄𝐒𝐀𝐓𝐈𝐕𝐀𝐑 𝐒𝐔𝐏𝐄𝐑 𝐏𝐔𝐋𝐎 ❌",
+"🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙"
         }, nil, "🚀 SUPER PULO - GUARDIAN")
         
         if not escolha then break end
@@ -759,11 +738,12 @@ end
 
 function Smeh()
     local choice = gg.choice({
-        "⬅️ Deslocar para a esquerda",
-        "➡️ Deslocar para a direita",
-        "🧮 Deslocamento próprio",
-        "↩️ Reversão",
-        "🔙 Voltar"
+"⬅️ 𝐃𝐄𝐒𝐋𝐎𝐂𝐀𝐑 𝐏𝐀𝐑𝐀 𝐀 𝐄𝐒𝐐𝐔𝐄𝐑𝐃𝐀 ⬅️",
+"➡️ 𝐃𝐄𝐒𝐋𝐎𝐂𝐀𝐑 𝐏𝐀𝐑𝐀 𝐀 𝐃𝐈𝐑𝐄𝐈𝐓𝐀 ➡️",
+"🧮 𝐃𝐄𝐒𝐋𝐎𝐂𝐀𝐌𝐄𝐍𝐓𝐎 𝐏𝐑Ó𝐏𝐑𝐈𝐎 🧮",
+"↩️ 𝐑𝐄𝐕𝐄𝐑𝐒Ã𝐎 ↩️",
+"🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙"
+  
     }, nil, "Menu de deslocamento")
 
     if choice == 1 then
@@ -791,12 +771,12 @@ end
 function Gm_weapons()
     gg.setVisible(false)
     local choice = gg.choice({
-        "🔫 AK-47",
-        "💥 Desert Eagle",
-        "🔧 M4",
-        "⚙️ MP5",
-        "🧨 Shotgun",
-        "🔙 Voltar"
+"🔫 𝐀𝐊-𝟒𝟕 🔫",
+"💥 𝐃𝐄𝐒𝐄𝐑𝐓 𝐄𝐀𝐆𝐋𝐄 💥",
+"🔧 𝐌𝟒 🔧",
+"⚙️ 𝐌𝐏𝟓 ⚙️",
+"🧨 𝐒𝐇𝐎𝐓𝐆𝐔𝐍 🧨",
+"🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙"
     }, nil, "Escolha uma arma:")
 
     if choice == 1 then
@@ -864,50 +844,50 @@ end
 function Gun1()
     gg.setVisible(false)
     local menu = gg.choice({
-        "▶ Selecione: soco inglês",
-        "▶ Selecione: Taco de Hóquei",
-        "▶ Selecione: bastão",
-        "▶ Selecione: faca",                
-        "▶ Selecione: bit",        
-        "▶ Selecione: pá",      
-        "▶ Selecione: bastão",     
-        "▶ Selecione: katana",       
-        "▶ Selecione: serra",        
-        "▶ Selecione: vibrador",        
-        "▶ Selecione: dildo2",        
-        "▶ Selecione: vibrador",        
-        "▶ Selecione: vibrador2",        
-        "▶ Selecione: flores",        
-        "▶ Selecione: bengala",        
-        "▶ Selecione: granada",        
-        "▶ Selecione: gás",        
-        "▶ Selecione: Molotov",        
-        "▶ Selecione: Colt45",        
-        "▶ Selecione: chocante",        
-        "▶ Selecione: deagle",        
-        "▶ Selecione: espingarda",        
-        "▶ Selecione: cortar",        
-        "▶ Selecione: salvo",        
-        "▶ Selecione: ultrassom",        
-        "▶ Selecione: mp5",        
-        "▶ Selecione: акр47",        
-        "▶ Selecione: м4",       
-        "▶ Selecione: tek9",        
-        "▶ Selecione: rifle",        
-        "▶ Selecione: rifle de precisão",        
-        "▶ Selecione: Lançador de Granadas",       
-        "▶ Selecione: pistola de sinalização",       
-        "▶ Selecione: Lança-chamas",        
-        "▶ Selecione: minigun",        
-        "▶ Selecione: Velcro",        
-        "▶ Selecione: ativador",        
-        "▶ Selecione: spray",        
-        "▶ Selecione: extintor de incêndio",        
-        "▶ Selecione: câmera",        
-        "▶ Selecione: câmera termográfica",        
-        "▶ Selecione: câmera térmica2",        
-        "▶ Selecione: paraquedas",        
-        "❌ Sair"
+"👊𝐒𝐎𝐂𝐎 𝐈𝐍𝐆𝐋Ê𝐒👊",
+"🏒𝐓𝐀𝐂𝐎 𝐃𝐄 𝐇Ó𝐐𝐔𝐄𝐈🏒",
+"🪄𝐁𝐀𝐒𝐓Ã𝐎🪄",
+"🔪𝐅𝐀𝐂𝐀🔪",
+"🔫𝐁𝐈𝐓🔫",
+"🪓𝐏Á🪓",
+"🪄𝐁𝐀𝐒𝐓Ã𝐎🪄",
+"⚔️𝐊𝐀𝐓𝐀𝐍𝐀⚔️",
+"🪚𝐒𝐄𝐑𝐑𝐀🪚",
+"🔫𝐕𝐈𝐁𝐑𝐀𝐃𝐎𝐑🔫",
+"🔫𝐃𝐈𝐋𝐃𝐎𝟐🔫",
+"🔫𝐕𝐈𝐁𝐑𝐀𝐃𝐎𝐑🔫",
+"🔫𝐕𝐈𝐁𝐑𝐀𝐃𝐎𝐑𝟐🔫",
+"🌸𝐅𝐋𝐎𝐑𝐄𝐒🌸",
+"🦯𝐁𝐄𝐍𝐆𝐀𝐋𝐀🦯",
+"💣𝐆𝐑𝐀𝐍𝐀𝐃𝐀💣",
+"🧪𝐆Á𝐒🧪",
+"🔥𝐌𝐎𝐋𝐎𝐓𝐎𝐕🔥",
+"🔫𝐂𝐎𝐋𝐓𝟒𝟓🔫",
+"⚡𝐂𝐇𝐎𝐂𝐀𝐍𝐓𝐄⚡",
+"🔫𝐃𝐄𝐀𝐆𝐋𝐄🔫",
+"🔫𝐄𝐒𝐏𝐈𝐍𝐆𝐀𝐑𝐃𝐀🔫",
+"🔫𝐂𝐎𝐑𝐓𝐀𝐑🔫",
+"🔫𝐒𝐀𝐋𝐕𝐎🔫",
+"🔫𝐔𝐋𝐓𝐑𝐀𝐒𝐒𝐎𝐌🔫",
+"🔫𝐌𝐏𝟓🔫",
+"🔫𝐀𝐊𝐑𝟒𝟕🔫",
+"🔫𝐌𝟒🔫",
+"🔫𝐓𝐄𝐊𝟗🔫",
+"🔫𝐑𝐈𝐅𝐋𝐄🔫",
+"🔫𝐑𝐈𝐅𝐋𝐄 𝐃𝐄 𝐏𝐑𝐄𝐂𝐈𝐒Ã𝐎🔫",
+"🔫𝐋𝐀𝐍Ç𝐀𝐃𝐎𝐑 𝐃𝐄 𝐆𝐑𝐀𝐍𝐀𝐃𝐀𝐒🔫",
+"🔫𝐏𝐈𝐒𝐓𝐎𝐋𝐀 𝐃𝐄 𝐒𝐈𝐍𝐀𝐋𝐈𝐙𝐀ÇÃ𝐎🔫",
+"🔥𝐋𝐀𝐍Ç𝐀-𝐂𝐇𝐀𝐌𝐀𝐒🔥",
+"🔫𝐌𝐈𝐍𝐈𝐆𝐔𝐍🔫",
+"🔫𝐕𝐄𝐋𝐂𝐑𝐎🔫",
+"🔫𝐀𝐓𝐈𝐕𝐀𝐃𝐎𝐑🔫",
+"🔫𝐒𝐏𝐑𝐀𝐘🔫",
+"🧯𝐄𝐗𝐓𝐈𝐍𝐓𝐎𝐑 𝐃𝐄 𝐈𝐍𝐂Ê𝐍𝐃𝐈𝐎🧯",
+"📷𝐂Ã𝐌𝐄𝐑𝐀📷",
+"📷𝐂Ã𝐌𝐄𝐑𝐀 𝐓𝐄𝐑𝐌𝐎𝐆𝐑Á𝐅𝐈𝐂𝐀📷",
+"📷𝐂Ã𝐌𝐄𝐑𝐀 𝐓É𝐑𝐌𝐈𝐂𝐀𝟐📷",
+"🪂𝐏𝐀𝐑𝐀𝐐𝐔𝐄𝐃𝐀𝐒🪂",
+"❌𝐒𝐀𝐈𝐑❌"
     }, nil, "Selecione uma arma:")
 
     if menu == 1 then
@@ -1580,9 +1560,9 @@ end
 function changeNik()
     gg.setVisible(false)
     local choice = gg.choice({
-        "✏ Mudar o apelido de outra pessoa",
-        "📜 Alterar apelido do chat",
-        "❌ Sair"
+"✏𝐌𝐔𝐃𝐀𝐑 𝐎 𝐀𝐏𝐄𝐋𝐈𝐃𝐎 𝐃𝐄 𝐎𝐔𝐓𝐑𝐀 𝐏𝐄𝐒𝐒𝐎𝐀✏",
+"📜𝐀𝐋𝐓𝐄𝐑𝐀𝐑 𝐀𝐏𝐄𝐋𝐈𝐃𝐎 𝐃𝐎 𝐂𝐇𝐀𝐓📜",
+"❌𝐒𝐀𝐈𝐑❌"
     }, nil, "Selecione uma ação:")
 
     if choice == 1 then
@@ -2416,13 +2396,13 @@ end
 function teleportCar()
     gg.setVisible(false)
     local choice = gg.choice({
-        "🔍 Encontrar e salvar coordenadas (Novo)",
-        "🔎 Encontrar e salvar coordenadas (Antigo)", 
-        "💾 Pontos salvos",
-        "🚀 Teleporte por coordenadas",
-        "✅ Teleporte por marca",
-        "🧾 Teleporte por checkpoint",
-        "🔙 Voltar"
+"🔍 𝐄𝐍𝐂𝐎𝐍𝐓𝐑𝐀𝐑 𝐄 𝐒𝐀𝐋𝐕𝐀𝐑 𝐂𝐎𝐎𝐑𝐃𝐄𝐍𝐀𝐃𝐀𝐒 (𝐍𝐎𝐕𝐎) 🔍",
+"🔎 𝐄𝐍𝐂𝐎𝐍𝐓𝐑𝐀𝐑 𝐄 𝐒𝐀𝐋𝐕𝐀𝐑 𝐂𝐎𝐎𝐑𝐃𝐄𝐍𝐀𝐃𝐀𝐒 (𝐀𝐍𝐓𝐈𝐆𝐎) 🔎",
+"💾 𝐏𝐎𝐍𝐓𝐎𝐒 𝐒𝐀𝐋𝐕𝐎𝐒 💾",
+"🚀 𝐓𝐄𝐋𝐄𝐏𝐎𝐑𝐓𝐄 𝐏𝐎𝐑 𝐂𝐎𝐎𝐑𝐃𝐄𝐍𝐀𝐃𝐀𝐒 🚀",
+"✅ 𝐓𝐄𝐋𝐄𝐏𝐎𝐑𝐓𝐄 𝐏𝐎𝐑 𝐌𝐀𝐑𝐂𝐀 ✅",
+"🧾 𝐓𝐄𝐋𝐄𝐏𝐎𝐑𝐓𝐄 𝐏𝐎𝐑 𝐂𝐇𝐄𝐂𝐊𝐏𝐎𝐈𝐍𝐓 🧾",
+"🔙 𝐕𝐎𝐋𝐓𝐀𝐑 🔙"
     }, nil, "Escolha uma ação")
 
     if choice == 1 then
@@ -3265,9 +3245,9 @@ function searchAndChangeHitboxes()
                 "Hitbox Finder\n\n" ..
                 "Valor atual: " .. changeValue .. "\n" ..
                 "Endereços alterados: " .. totalChanged,
-                "▶ Continuar",
-                "✏ Alterar valor",
-                "⛔ Parar"
+                "▶𝐂𝐎𝐍𝐓𝐈𝐍𝐔𝐀𝐑▶",
+                "✏𝐀𝐋𝐓𝐄𝐑𝐀𝐑 𝐕𝐀𝐋𝐎𝐑✏",
+                "⛔𝐏𝐀𝐑𝐀𝐑⛔"
             )
 
             if choice == 2 then
